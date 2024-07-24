@@ -1,44 +1,37 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+body, html {
+    height: 100%;
     margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .background {
-    background: url('https://your-love-background-image-url.jpg') no-repeat center center fixed;
+    background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiuse1E2VaHEWhowM0PW5um6PdjFbDXXvLzQcOnVVI7KQVbKR1nHEsU9W_QhRbt1AUdRbjMIFShM5HgNUzCjMYQsufxSyhYMemvyN-AY8fk8KNuSN-im6lKyFTPmp4VJ0fTSlwwXyUQ5PNN5EMptxpnvYnB4lwAZc8fOv5gjxKqmUxMN5FFloOwsVtOIgU/s1001/IMG_20240725_012143.jpg') no-repeat center center fixed;
     background-size: cover;
-    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 800px;
     text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
 }
 
 h1 {
-    color: #e91e63;
+    font-size: 3em;
+    margin-bottom: 20px;
 }
 
 .slideshow-container {
     position: relative;
     max-width: 100%;
     margin: auto;
-    overflow: hidden;
 }
 
 .mySlides {
@@ -47,25 +40,55 @@ h1 {
 
 .mySlides img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
+.message {
+    margin: 20px 0;
+}
+
+.audio {
+    margin: 20px 0;
+}
+
+.love-sign {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: popUp 2s ease-in-out infinite;
+}
+
+.love-sign img {
+    width: 150px; /* Adjust size as needed */
+    opacity: 0.8; /* Adjust transparency if needed */
+}
+
+@keyframes popUp {
+    0%, 100% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Slideshow CSS */
 .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
 }
 
-@keyframes fade {
-    from {opacity: .4}
+@-webkit-keyframes fade {
+    from {opacity: .4} 
     to {opacity: 1}
 }
 
-.message {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.audio {
-    margin-top: 20px;
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
 }
